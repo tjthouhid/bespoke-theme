@@ -160,20 +160,92 @@ body {
 
 /* Center align the text within the three columns below the carousel */
 .marketing .col-lg-4 {
-  margin-bottom: 1.5rem;
-  text-align: center;
+    margin-bottom: 1.5rem;
+    
+
+}
+.section{
+	text-align: left;
+    background-size: contain;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    padding: 50px 30px;
+    font-family: 'Roboto', sans-serif;
+}
+.marketing .col-lg-4 h2 {
+	font-weight: 700 !important;
+    font-size: 26px;
 }
 /* rtl:begin:ignore */
 .marketing .col-lg-4 p {
-  margin-right: .75rem;
-  margin-left: .75rem;
+    font-size: 14px;
+    font-weight: 400;
+}
+.marketing .col-lg-4 a {
+	background-color: #f00;
+    font-size: 18px;
+    font-weight: 700;
+    width: 100%;
+    border-radius: 0px;
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    padding: 8px 10px;
+}
+.marketing .col-lg-4 a:hover {
+	opacity: 0.7;
 }
 /* rtl:end:ignore */
 
 
-/* Featurettes
+/* Section 1
 ------------------------- */
 
+
+.section2{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.section2 .col-md-12{
+	padding: 0px;
+}
+.section_content{
+	padding: 80px 60px;
+    background-color: rgba(0,0,0,0.4);
+}
+.section_content h1{
+	  font-family: 'Roboto', sans-serif;
+	  font-weight: 300;
+	  font-size: 34px;
+}
+.section_content p{
+	      font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+}
+
+.section_content a{
+	font-family: 'Roboto', sans-serif;
+    background-color: #f00;
+    font-size: 18px;
+    font-weight: 700;
+    width: 100%;
+    border-radius: 0px;
+    text-decoration: none;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0px;
+    max-width: 240px;
+    float: right;
+}
+.section_content a:hover {
+	opacity: 0.7;
+}
+.section_content div{
+
+}
 .featurette-divider {
   margin: 5rem 0; /* Space out the Bootstrap <hr> more */
 }
@@ -183,7 +255,24 @@ body {
 .featurette-heading {
   letter-spacing: -.05rem;
 }
+footer{
+	padding: 10px 0px;
+    margin-top: 40px;
+}
+.footer-logo{
 
+}
+.footer-logo img{
+	width: 120px;
+    height: auto;
+}
+.footer-copy{
+	    margin-bottom: 0px;
+    text-align: right;
+    margin-top: 40px;
+    font-size: 14px;
+    font-weight: 100;
+}
 /* rtl:end:remove */
 
 /* RESPONSIVE CSS

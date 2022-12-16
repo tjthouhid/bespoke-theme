@@ -81,61 +81,67 @@ get_header();
 
     <!-- Three columns of text below the carousel -->
     <div class="row">
-      <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+    	<?php $section_1_image = get_field('section_1_image');
+    	if( !empty( $section_1_image ) ): ?>
+	      <div class="col-lg-4">
+		    <div class="section" style="background-image: url(<?php echo esc_url($section_1_image['url']); ?>)">
+		        <h2 class="fw-normal"><?php echo get_field('section_1_header')?></h2>
+		        <p><?php echo get_field('section_1_text')?></p>
+		        <a class="" href="<?php echo get_field('section_1_url')?>">SHOP NOW</a>
+		    </div>
+	      </div><!-- /.col-lg-4 -->
+	     <?php endif; ?>
 
-        <h2 class="fw-normal">Heading</h2>
-        <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+	     <?php $section_2_image = get_field('section_2_image');
+    	if( !empty( $section_2_image ) ): ?>
+	      <div class="col-lg-4">
+		    <div class="section" style="background-image: url(<?php echo esc_url($section_2_image['url']); ?>)">
+	        	<h2 class="fw-normal"><?php echo get_field('section_2_header')?></h2>
+		        <p><?php echo get_field('section_2_text')?></p>
+		        <a class="" href="<?php echo get_field('section_2_url')?>">SHOP NOW</a>
+		    </div>
+	      </div><!-- /.col-lg-4 -->
+	     <?php endif; ?>
 
-        <h2 class="fw-normal">Heading</h2>
-        <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-        <h2 class="fw-normal">Heading</h2>
-        <p>And lastly this, the third column of representative placeholder content.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
+	     <?php $section_3_image = get_field('section_3_image');
+    	if( !empty( $section_3_image ) ): ?>
+	      <div class="col-lg-4">
+		    <div class="section" style="background-image: url(<?php echo esc_url($section_3_image['url']); ?>)">
+		        <h2 class="fw-normal"><?php echo get_field('section_3_header')?></h2>
+		        <p><?php echo get_field('section_3_text')?></p>
+		        <a class="" href="<?php echo get_field('section_3_url')?>">SHOP NOW</a>
+		    </div>
+	      </div><!-- /.col-lg-4 -->
+	     <?php endif; ?>
+     
     </div><!-- /.row -->
 
-
-    <!-- START THE FEATURETTES -->
-
     <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-        <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
-      </div>
-      <div class="col-md-5">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-
-      </div>
-    </div>
-
-    
-    <hr class="featurette-divider">
-
-    <!-- /END THE FEATURETTES -->
-
   </div><!-- /.container -->
 
+    <!-- START Section 2 -->
+   <div class="container-fluid">
+   	<?php $section_bg_image = get_field('bg_image'); ?>
+	    <div class="row section2" style="background-image: url(<?php echo esc_url($section_bg_image['url']); ?>)">
+	      <div class="col-md-12">
+	      	
+	      	<div class="section_content" >
+	      		<h1><?php echo get_field('sec_2_header_text')?></h1>
+	      		<p class="lead"><?php echo get_field('sec_2_text')?></p>
+	      		<a class="" href="<?php echo get_field('sec_2_url')?>">READ MORE</a>
+	      		<div class="clearfix"></div>
+	      	</div>
+	        
+	      </div>
+	    </div>
+	</div><!-- /END Section 2 -->
 
-  <!-- FOOTER -->
-  <footer class="container">
-    <p class="float-end"><a href="#">Back to top</a></p>
-    <p>&copy; 2017–2022 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-  </footer>
-</main>
+  
+
+
+
 	
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();

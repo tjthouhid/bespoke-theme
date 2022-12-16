@@ -11,21 +11,35 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'bespoke-theme' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'bespoke-theme' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'bespoke-theme' ), 'bespoke-theme', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+  <!-- FOOTER -->
+  <footer class="container">
+  	<div class="row">
+  		<div class="col">
+  			    <?php
+  				$custom_logo_id = get_theme_mod( 'custom_logo' );
+  				$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' )
+  				?>
+  					<a class="footer-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+  						<?php 
+  						if ( has_custom_logo() ) {
+  							echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '">';
+  						} else {
+  							echo '<h1>' . get_bloginfo('name') . '</h1>';
+  						}
+  						?>
+  							
+  					</a>
+  		</div>
+  		<div class="col">
+  			<p class="footer-copy">&copy; 2022 All rights Reserved by Levi Lucas</p>
+  		</div>
+  	</div>
+    
+    
+  </footer>
+</main>
+
+	
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
