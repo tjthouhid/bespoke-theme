@@ -25,35 +25,44 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'bespoke-theme' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$bespoke_theme_description = get_bloginfo( 'description', 'display' );
-			if ( $bespoke_theme_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $bespoke_theme_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'bespoke-theme' ); ?></button>
-			<?php
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark stop-fixed-top bg-dark">
+    <div class="container-fluid">
+    	<?php
+				$custom_logo_id = get_theme_mod( 'custom_logo' );
+				$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' )
+				?>
+      			<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+      				<?php 
+      				if ( has_custom_logo() ) {
+      					echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '">';
+      				} else {
+      					echo '<h1>' . get_bloginfo('name') . '</h1>';
+      				}
+      				?>
+      					
+      				</a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <?php
 			wp_nav_menu(
 				array(
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
+					'container_id'        => 'navbarCollapse',
+					'container'         => 'div',
+					'container_class'   => 'collapse navbar-collapse',
+					'menu_class'        => 'navbar-nav ms-auto mb-2 mb-md-0',
 				)
 			);
 			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+
+    </div>
+  </nav>
+</header>
+
+
+	
