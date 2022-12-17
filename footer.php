@@ -14,7 +14,7 @@
   <!-- FOOTER -->
   <footer class="container">
   	<div class="row">
-  		<div class="col">
+  		<div class="col col-12 col-md-6">
   			    <?php
   				$custom_logo_id = get_theme_mod( 'custom_logo' );
   				$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' )
@@ -30,7 +30,7 @@
   							
   					</a>
   		</div>
-  		<div class="col">
+  		<div class="col col-12 col-md-6">
   			<p class="footer-copy">&copy; 2022 All rights Reserved by Levi Lucas</p>
   		</div>
   	</div>

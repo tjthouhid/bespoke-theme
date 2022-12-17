@@ -267,11 +267,19 @@ footer{
     height: auto;
 }
 .footer-copy{
-	    margin-bottom: 0px;
+	margin-bottom: 0px;
     text-align: right;
     margin-top: 40px;
     font-size: 14px;
     font-weight: 100;
+}
+@media (max-width: 768px) {
+  footer {
+    text-align: center;
+  }
+  .footer-copy{
+  	text-align: center;
+  }
 }
 /* rtl:end:remove */
 
